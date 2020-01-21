@@ -1,0 +1,237 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+p,
+a,
+h1,
+h2 {
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+li,a {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*=============================================
+=            Navbar            =
+=============================================*/
+
+#navbar {
+  background-color: var(--main-red);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  padding: 1em;
+  font-size: 1.3rem;
+}
+
+.nav-link:last-child {
+  margin-right: 3%;
+}
+
+.nav-link:hover {
+  background-color: var(--main-blue);
+}
+/*=====  End of Navbar  ======*/
+
+/*=============================================
+=            Welcome Section comment block            =
+=============================================*/
+
+#welcome-section {
+  background-color: var(--main-gray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#welcome-section > p {
+  color: var(--main-red);
+  font-weight: 200;
+  font-style: italic;
+}
+
+/*=====  End of Welcome Section comment block  ======*/
+
+/*=============================================
+=            Projects Sections            =
+=============================================*/
+
+#projects {
+  background: var(--main-blue);
+  width: 100%;
+  padding-top: 3em;
+  height: auto;
+}
+
+.project-initial-section {
+  font-size: 1.3em;
+  max-width: 640px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1em;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+#projects .project-container {
+  display: grid;  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
+  gap: 50px;
+  justify-content: center;
+}
+
+.project-container .project-tile {
+  background-color: var(--main-gray);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.project-tile .project-title-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.project-title-container .project-title {
+  font-size: 23px;
+}
+
+.project-tile .project-title-container .title-effect {
+  color: var(--main-gray);
+  transition: color 0.6s ease-out;
+}
+
+.project-tile:hover .project-title-container .title-effect {
+  color: #ff7f50;
+  
+}
+
+.project-container-img .project-img {
+  width: 100%;
+  height: auto;
+}
+
+#projects .button-show-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  height: 90px;
+}
+
+.button-show-container button {
+  padding: 10px 30px;
+  font-family: inherit;
+  font-size: 0.7em;
+  background-color: var(--main-gray);
+  border: none;
+  color: #FFF;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.button-show-container button:hover {
+  background-color: var(--main-red);
+}
+
+.button-show-container button .fas {
+  transition: all 0.5s ease;
+}
+
+.button-show-container button:hover .fas {
+  transform: translateX(5px);
+}
+/*=====  End of Projects Sections  ======*/
+
+/*=============================================
+=            Section Contacts            =
+=============================================*/
+
+#contact {
+  background: var(--main-gray);
+  color: white;
+  width: 100%;
+}
+
+#contact .contact-container{
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 3em;
+}
+
+#contact .message-contact {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding-top: 2em;
+  font-size: 2em;
+}
+
+.message-contact > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 20px;
+}
+
+#contact .social-list {
+  display: flex;
+  margin-top: 2em; 
+  justify-content: center;
+}
+
+.social-list .social-items{
+  padding: 10px 10px;
+  margin-left: 0.5em;
+  transition: transform 0.5s ease;
+}
+
+.social-list .social-items:hover {
+  transform: translateY(10px);
+}
+
+/*=====  End of Section Contacts  ======*/

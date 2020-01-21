@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-darkblue);
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+#container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width:750px) {
+    #container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 700px) {
+    #container {
+        max-width: 500px;
+    }
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 1.8em;
+}
+
+.header h1 {
+    font-weight: 200;
+    margin-bottom: 0.25em;
+}
+
+.header p {
+    font-style: italic;
+    font-size: 1.125em;
+}
+
+form {
+    border-radius: 5px;
+    padding: 3em;
+    background-color: var(--color-darkblue-alpha);
+}
+
+select, input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2em;
+}
+
+.form-group label, p {
+    font-size: 1.2em;
+    margin-bottom: 0.25em;
+}
+
+.form-control {
+    color: gray;
+    padding: 0.3em 0.75em;
+    border-radius: 0.25em;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.agroup {
+    display: flex;
+    align-items: center;
+}
+
+.agroup input {
+    display: inline-block;
+    margin-right: 0.625rem;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+textarea {
+    resize: vertical;
+    font-size: 1.2em;
+    width: 100%;
+    min-height: 120px;
+}
+
+#submit {
+    width: 100%;
+    padding: 0.6em 1em;
+    background-color: var(--color-green);
+    color: inherit;
+}
