@@ -40,7 +40,8 @@ h2 {
   font-weight: 700;
 }
 
-li,a {
+li,
+a {
   display: inline-block;
 }
 
@@ -118,7 +119,7 @@ a {
 }
 
 #projects .project-container {
-  display: grid;  grid-template-rows: 1fr;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 500px));
   gap: 50px;
   justify-content: center;
@@ -147,7 +148,6 @@ a {
 
 .project-tile:hover .project-title-container .title-effect {
   color: #ff7f50;
-  
 }
 
 .project-container-img .project-img {
@@ -169,7 +169,7 @@ a {
   font-size: 0.7em;
   background-color: var(--main-gray);
   border: none;
-  color: #FFF;
+  color: #fff;
   border-radius: 2px;
   cursor: pointer;
   transition: background-color 0.6s ease;
@@ -198,14 +198,14 @@ a {
   width: 100%;
 }
 
-#contact .contact-container{
+#contact .contact-container {
   max-width: 1000px;
   margin: auto;
   padding-bottom: 3em;
 }
 
 #contact .message-contact {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   padding-top: 2em;
   font-size: 2em;
@@ -220,11 +220,11 @@ a {
 
 #contact .social-list {
   display: flex;
-  margin-top: 2em; 
+  margin-top: 2em;
   justify-content: center;
 }
 
-.social-list .social-items{
+.social-list .social-items {
   padding: 10px 10px;
   margin-left: 0.5em;
   transition: transform 0.5s ease;
@@ -235,3 +235,47 @@ a {
 }
 
 /*=====  End of Section Contacts  ======*/
+
+
+/*=============================================
+=            Section Contacts            =
+=============================================*/
+
+.footer {
+  background-color: var(--main-gray);
+  font-size: 1rem;
+  display: flex;
+  border-top: 5px solid var(--main-red);
+  padding: 3em;
+  justify-content: space-around;
+}
+
+.footer > p {
+  font-family: inherit;
+  font-size: 1.3em;
+}
+
+/*=====  End of Section Contacts  ======*/
+
+@media (max-width: 986px) {
+  .social-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .social-list .social-items {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .social-list .social-items:hover {
+    transform: scale(1.1);
+  }
+
+  .footer {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    justify-content: space-between;
+  }
+}
